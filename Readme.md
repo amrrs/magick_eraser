@@ -1,3 +1,6 @@
+Magick Eraser with R
+====================
+
 I am always intrigued by these kind of Black markers used to hide some
 information. So a tiny attempt to see if `magick` can do some **magic
 with R**
@@ -14,7 +17,7 @@ with R**
      image_channel() %>% 
       image_modulate(brightness = 350) %>% 
       image_quantize(max = 80)  %>% 
-      image_modulate(brightness = 450)  -> new
+      image_modulate(brightness = 500)  -> new
 
     images <- c(image %>% image_annotate("Supposedly Hidden", size = 40, gravity = "South", strokecolor = "red") , 
                 new %>%   image_annotate("magick with R", size = 40, gravity = "South", strokecolor = "green"))
